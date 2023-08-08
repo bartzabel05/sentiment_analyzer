@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewpoert" content="width=device-width,initial_scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container-lg">
+        <form action="http://127.0.0.1:5000/feedback" method="post" class="w-full max-w-2xl bg-white shadow-lg rounded px-8 pt-6 pb-8 mx-auto mt-60">
+            <div class="mb-4">
+                <label for="inp_text" class="block text-gray-700 text-sm font-bold mb-2">Input Text</label>
+                <p class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">{{input_text}}</p>
+                <input type="hidden" name="inp_text" value="{{input_text}}"/>
+            </div>
+            
+            <input type="hidden" name="vec" value="{{vector}}"/>
+
+            <div class="mb-4">
+                <label for="sentiment" class="block text-gray-700 text-sm font-bold mb-2">Predicted Sentiment</label>
+                <p class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">{{sentiment}}</p>
+                <input type="hidden" name="model_sentiment" value="{{sentiment}}"/>
+            </div>
+
+            <div>
+                <label for="feedback" class="block text-gray-700 text-sm font-bold mb-2">Is the prediction right or wrong?</label>
+
+                <input type="radio" name="feedback" value="yes" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <label for="yes" class="ml-2 text-sm font-medium text-black dark:text-gray-300"> Yes </label>
+
+                <input type="radio" name="feedback" value="no" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <label for="no" class="ml-2 text-sm font-medium text-black dark:text-gray-300"> No </label>
+            </div>
+
+            <input type="submit" value="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"/>
+        </form>
+    </div>
+</body>
+</html>

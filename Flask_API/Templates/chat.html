@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name="viewpoert" content="width=device-width,initial_scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        {% include 'navbar.html' %}
+        <div class=" w-full container-lg ">
+            <form action="http://127.0.0.1:5000/form" method="post" class="w-full max-w-2xl bg-white shadow-lg rounded px-8 pt-6 pb-8 mx-auto mt-60">
+                <div class="mb-4">
+                    <label for="txt_input" class="block text-gray-700 text-sm font-bold mb-2">Enter Text</label>
+                    <input type="text" name="txt_input" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+                </div>
+
+                <input type="submit" value="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"/>
+        </div>
+    </body>
+</html>
