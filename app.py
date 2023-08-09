@@ -7,10 +7,9 @@ from psycopg2 import Error
 from psycopg2.extras import RealDictCursor
 import time
 import numpy as np
+from sqlalchemy import text
+from database import engine
 # from sklearn import partial_fit
-
-# sgd_classifier=joblib.load('trained_sgd_classifier (1).joblib')
-# vectorizer=joblib.load('tfidf_vectorizer.joblib')
 
 with open("trained_sgd_classifier (1).joblib","rb") as f:
     sgd_classifier=joblib.load(f)
@@ -19,17 +18,18 @@ with open("tfidf_vectorizer.joblib","rb") as f:
     vectorizer=joblib.load(f)
 
 
+connection_string=os.environ['DB_CONNECTION_STRING']
 
-# text_input_list=[]
-# pred_sentiment=[]
-# user_sentiment=[]
-
-connection_string="postgresql://postgres:@db.yhpldmpaxasraaubhuds.supabase.co:5432/postgres"
+conn_host=os.environ["DB_HOST"]
+conn_db=os.environ["DB_DATABASE"]
+conn_pass=os.environ["DB_PASS"]
+conn_user=os.environ["DB_USER"]
+conn_port=os.environ["DB_PORT"]
 
 while True:
     try:
-        # conn=psycopg2.connect(host="localhost",database="Sentiment_Analysis",user="postgres",password="kartik05",cursor_factory=RealDictCursor)
-        conn=psycopg2.connect(user="postgres", password="foREVer@6660578",host="db.yhpldmpaxasraaubhuds.supabase.co",port="5432",database="postgres",cursor_factory=RealDictCursor)
+        conn=psycopg2.connect(host=conn_host,database=conn_db,user=conn_user,password=conn_pass,port=conn_port,cursor_factory=RealDictCursor)
+
         cursor=conn.cursor()
         print("Database connection successful")
         break
@@ -71,9 +71,7 @@ def append_file(filename,res):
     
     except IOError:
         print("Error: could not append to file "+filename)
-
-# def read_file(filename):
-    
+   
 
 app=Flask(__name__)
 
@@ -108,9 +106,9 @@ def feedback():
             true_sentiment=int(model_pred)
             
         elif(user_sentiment=='no'):
-            if(model_pred==1):
+            if(model_pred=='1'):
                 true_sentiment=0
-            elif(model_pred==0):
+            elif(model_pred=='0'):
                 true_sentiment=1
         
         vec_inp=vectorizer.transform([input_txt])
@@ -127,9 +125,6 @@ def feedback():
         x={"input_text":input_txt,"model_pred":model_pred,"true_sentiment":true_sentiment}
 
         append_file("results.json",x)
-        # y=json.loads(x)
-
-        # append_file("results.json",y)
 
         return render_template('feedback.html')
 
