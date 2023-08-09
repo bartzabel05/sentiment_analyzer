@@ -4,6 +4,3 @@ sqlalchemy
 psycopg2
 numpy
 joblib
-json
-time 
-os
