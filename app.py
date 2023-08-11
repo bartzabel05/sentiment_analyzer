@@ -7,8 +7,8 @@ from psycopg2 import Error
 from psycopg2.extras import RealDictCursor
 import time
 import numpy as np
-from sqlalchemy import text
-from database import engine
+# from sqlalchemy import text
+# from database import engine
 # from sklearn import partial_fit
 
 with open("trained_sgd_classifier (1).joblib","rb") as f:
