@@ -1,7 +1,53 @@
-Flask
-gunicorn
-psycopg2-binary
-psycopg2
-numpy
-joblib
-sklearn
+CacheControl==0.12.14
+cachy==0.3.0
+cffi==1.15.1
+cleo==0.8.1
+clikit==0.6.2
+crashtest==0.3.1
+cryptography==41.0.3
+debugpy @ https://files.pythonhosted.org/packages/97/b2/1b264a5985de53f3f9399eb3ea83dcc4b8d2126995e04cb318c806b1424e/debugpy-1.6.7-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=e3876611d114a18aafef6383695dfc3f1217c98a9168c1aaf1a02b01ec7d8d1e
+distlib==0.3.7
+filelock==3.12.2
+greenlet==2.0.2
+html5lib==1.1
+importlib-metadata==6.8.0
+jaraco.classes==3.3.0
+jedi @ https://files.pythonhosted.org/packages/6d/60/4acda63286ef6023515eb914543ba36496b8929cb7af49ecce63afde09c6/jedi-0.18.2-py2.py3-none-any.whl#sha256=203c1fd9d969ab8f2119ec0a3342e0b49910045abe6af0a3ae83a5764d54639e
+jeepney==0.8.0
+keyring==24.2.0
+lockfile==0.12.2
+more-itertools==10.0.0
+msgpack==1.0.5
+packaging==23.1
+parso @ https://files.pythonhosted.org/packages/05/63/8011bd08a4111858f79d2b09aad86638490d62fbf881c44e434a6dfca87b/parso-0.8.3-py2.py3-none-any.whl#sha256=c001d4636cd3aecdaf33cbb40aebb59b094be2a74c556778ef5576c175e19e75
+pastel==0.2.1
+pexpect==4.8.0
+pkginfo==1.9.6
+platformdirs==3.10.0
+pluggy @ https://files.pythonhosted.org/packages/51/32/4a79112b8b87b21450b066e102d6608907f4c885ed7b04c3fdb085d4d6ae/pluggy-1.2.0-py3-none-any.whl#sha256=c2fd55a7d7a3863cba1a013e4e2414658b1d07b6bc57b3919e0c63c9abb99849
+poetry @ https://storage.googleapis.com/poetry-bundles/poetry-1.1.15-py2.py3-none-any.whl
+poetry-core==1.0.8
+ptyprocess==0.7.0
+pycparser==2.21
+pyflakes @ https://files.pythonhosted.org/packages/dc/13/63178f59f74e53acc2165aee4b002619a3cfa7eeaeac989a9eb41edf364e/pyflakes-2.5.0-py2.py3-none-any.whl#sha256=4579f67d887f804e67edb544428f264b7b24f435b263c4614f384135cea553d2
+pylev==1.4.0
+python-lsp-jsonrpc @ https://files.pythonhosted.org/packages/06/ee/754bfd5f6bfe7162c10d3ecb0aeef6f882f91d3231596c83f761a75efd0b/python_lsp_jsonrpc-1.0.0-py3-none-any.whl#sha256=079b143be64b0a378bdb21dff5e28a8c1393fe7e8a654ef068322d754e545fc7
+pytoolconfig @ https://files.pythonhosted.org/packages/76/0a/8cc3f0f42c27f2b68cea9b24c5423005369c12ff7d7935edff72d1dd908b/pytoolconfig-1.2.5-py3-none-any.whl#sha256=239ba9d3e537b91d0243275a497700ea39a5e259ddb80421c366e3b288bf30fe
+replit-python-lsp-server @ https://files.pythonhosted.org/packages/09/42/44ff903505cefa2b2d06fcc164ddff74510eece259e30da6a0c2c68976c8/replit_python_lsp_server-1.15.9-py3-none-any.whl#sha256=205faf150008be7d3da2ac16fc178c833d22835e24841cb82b666443a6b28bef
+requests-toolbelt==0.9.1
+rope @ https://files.pythonhosted.org/packages/cf/6e/eb3556ee1420158c8d72f12a2672e1a60d7bb6db1348a10b456965b732e6/rope-1.9.0-py3-none-any.whl#sha256=2ed32d72cd2c4395bb1d569e38fd4f15d6080cfadd61b6e5c565fd39e3f677aa
+SecretStorage==3.3.3
+shellingham @ https://files.pythonhosted.org/packages/89/6e/41614878c7e964c907016418a8493a5508253727a15862a79992940ac9c3/shellingham-1.5.1-py2.py3-none-any.whl#sha256=ce5f6d0062c719deabf696bccfab5273e09a6ea1b0ed32867aff03392adbdc51
+six==1.16.0
+SQLAlchemy==2.0.19
+toml @ https://files.pythonhosted.org/packages/44/6f/7120676b6d73228c96e17f1f794d8ab046fc910d781c8d151120c3f1569e/toml-0.10.2-py2.py3-none-any.whl#sha256=806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b
+tomli @ https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl#sha256=939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc
+tomlkit @ https://files.pythonhosted.org/packages/a0/6d/808775ed618e51edaa7bbe6759e22e1c7eafe359af6e084700c6d39d3455/tomlkit-0.12.1-py3-none-any.whl#sha256=712cbd236609acc6a3e2e97253dfc52d4c2082982a88f61b640ecf0817eab899
+typing_extensions==4.7.1
+ujson @ https://files.pythonhosted.org/packages/78/90/bfa62616208bd5195a113c0aa4e42c9f471e69edfc48feba6a0ab494cccb/ujson-5.8.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=40931d7c08c4ce99adc4b409ddb1bbb01635a950e81239c2382cfe24251b127a
+virtualenv==20.24.2
+webencodings==0.5.1
+whatthepatch @ https://files.pythonhosted.org/packages/32/71/fb2edaee7c28ec6e22b7775a2606517f70e1f0af4d8a9fc333b026725d99/whatthepatch-1.0.5-py3-none-any.whl#sha256=6bc41f9f48a63384be4478d8b2d5b22185aac75be853cdcb150a2dc174ede7e1
+yapf @ https://files.pythonhosted.org/packages/23/75/c374517c09e31bf22d3b3f156d73e0f38d08e29b2afdd607cef5f1e10aa9/yapf-0.40.1-py3-none-any.whl#sha256=b8bfc1f280949153e795181768ca14ef43d7312629a06c43e7abd279323af313
+zipp==3.16.2
+scikit-learn==1.3.0
