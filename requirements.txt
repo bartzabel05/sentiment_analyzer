@@ -1,7 +1,7 @@
 Flask
 gunicorn
-sqlalchemy
 psycopg2-binary
 psycopg2
 numpy
 joblib
+sklear
