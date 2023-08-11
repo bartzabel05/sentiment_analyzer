@@ -1,7 +1,7 @@
 Flask
 gunicorn
 sqlalchemy
-# psycopg2>=2.7,--no-binary psycopg2
 psycopg2-binary
+psycopg2
 numpy
 joblib
